@@ -12,6 +12,52 @@ Now I focus on learning and building **practical ML solutions**, understanding d
 
 ---
 
+
+
+## 🌱 How I Started With Machine Learning
+
+My journey into Machine Learning started with small experiments and curiosity about how models make decisions.
+
+One of the first things I built was a simple **Logistic Regression model** that predicted whether a Bollywood movie featured **Shah Rukh Khan** based on features like release year, romance level, drama level, and popularity.
+
+I even integrated **Python text-to-speech (pyttsx3)** so the program could speak the prediction result.
+
+This small experiment helped me understand:
+- How datasets are structured
+- How classification models like **Logistic Regression** work
+- How models learn patterns from features
+- How to connect ML with real applications
+
+That curiosity led me deeper into **data analysis, model training, and building practical ML systems.**
+
+<details>
+<summary>My First ML Experiment (Logistic Regression)</summary>
+
+```python
+import pyttsx3
+from sklearn.linear_model import LogisticRegression
+
+engine = pyttsx3.init()
+
+Movies = [
+    [1993, 6, 9, 75],
+    [1995, 10, 7, 95],
+    [1997, 9, 8, 85],
+]
+
+Labels = [1,1,1]
+
+model = LogisticRegression()
+model.fit(Movies, Labels)
+
+Movie_Input = [[1993,6,8,85]]
+prediction = model.predict(Movie_Input)
+
+
+
+```
+
+
 ## 🚀 What I'm Working On
 
 - Building **Machine Learning projects**
