@@ -76,7 +76,7 @@ Python
 Scikit-learn, Tensorflow, Keras
 
 ### Deep Learning
-Forward Propogation, Back Propogation, Gradient Descents
+Forward Propogation, Back Propogation, Gradient Descents, Artificial Neural Networks (ANN)
 
 ### Data Science
 Pandas • NumPy • Matplotlib • Seaborn
@@ -106,8 +106,8 @@ Gradient Boosting and Achieved a new accuracy with it.
 ## 📊 Current Focus
 
 - Machine Learning Engineering
-- Deep Learning
-- Model Deployment
+- Deep Learning (CNNs, RNNs, Transformers)
+- NLP
 - Building practical AI applications
 
 ---
