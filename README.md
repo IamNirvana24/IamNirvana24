@@ -73,7 +73,10 @@ prediction = model.predict(Movie_Input)
 Python
 
 ### Machine Learning
-Scikit-learn
+Scikit-learn, Tensorflow, Keras
+
+### Deep Learning
+Forward Propogation, Back Propogation, Gradient Descents
 
 ### Data Science
 Pandas • NumPy • Matplotlib • Seaborn
@@ -94,13 +97,17 @@ Exploratory Data Analysis on health datasets using Pandas and Matplotlib.
 🔹 **Customer Churn Prediction**  
 Implemented preprocessing and model training workflow using Scikit-learn to predict whether a customer will leave the company.
 
+🔹 **HR Powered Customer Attrition Prediction**  
+Implemented a whole Machine Learning Pipeline from starting as a part of my Capstone Project, trained Algos like
+Gradient Boosting and Achieved a new accuracy with it.
+
 ---
 
 ## 📊 Current Focus
 
 - Machine Learning Engineering
+- Deep Learning
 - Model Deployment
-- Data Analysis
 - Building practical AI applications
 
 ---
