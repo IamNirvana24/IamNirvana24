@@ -204,7 +204,6 @@ A complete, end-to-end ML pipeline — from raw data to a deployed dashboard.
 - [x] Build foundational ML projects (classification, EDA, deployment)
 - [x] Ship an end-to-end pipeline with a live dashboard (Employee Attrition System)
 - [ ] Go deep on Deep Learning, Computer Vision & NLP
-- [ ] Earn Microsoft Azure AI-900
 - [ ] Explore Generative AI systems and LLM tooling
 - [ ] Compete actively on Kaggle
 - [ ] Contribute to open-source ML/AI repositories
