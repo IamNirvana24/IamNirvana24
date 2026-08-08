@@ -2,6 +2,8 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=260&section=header&text=Nirvana%20Dubey&fontSize=60&fontColor=00F0FF&animation=fadeIn&fontAlignY=38&desc=AI%20%26%20Machine%20Learning%20Engineer%20in%20the%20Making&descAlignY=58&descColor=B39DFF&descSize=20" width="100%"/>
 
+
+
 <a href="https://github.com/IamNirvana24">
   <img src="https://readme-typing-svg.demolab.com/?lines=Building+machines+that+learn+from+data;Exploring+Deep+Learning+%26+Neural+Networks;Turning+datasets+into+decisions;Currently+preparing+for+AI%2FML+Engineering+roles&font=Fira+Code&center=true&width=650&height=45&color=00F0FF&vCenter=true&size=22&pause=1800&background=00000000" />
 </a>
