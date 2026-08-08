@@ -1,0 +1,97 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05040d"/>
+      <stop offset="50%" stop-color="#0f0c29"/>
+      <stop offset="100%" stop-color="#150e2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#B39DFF"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+    <pattern id="hex" width="46" height="80" patternUnits="userSpaceOnUse" patternTransform="scale(1)">
+      <path d="M23 0 L46 13 L46 40 L23 53 L0 40 L0 13 Z" fill="none" stroke="#2a2452" stroke-width="0.6" opacity="0.35"/>
+      <path d="M23 40 L46 53 L46 80 L23 93 L0 80 L0 53 Z" fill="none" stroke="#2a2452" stroke-width="0.6" opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <rect width="1200" height="300" fill="url(#hex)"/>
+
+  <!-- scan line sweep -->
+  <rect x="0" y="-40" width="1200" height="40" fill="#00F0FF" opacity="0.06">
+    <animate attributeName="y" values="-40;300" dur="4.5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- HUD corner brackets -->
+  <g stroke="#00F0FF" stroke-width="2" fill="none" opacity="0.8">
+    <path d="M20 20 L20 55 M20 20 L55 20"/>
+    <path d="M1180 20 L1180 55 M1180 20 L1145 20"/>
+    <path d="M20 280 L20 245 M20 280 L55 280"/>
+    <path d="M1180 280 L1180 245 M1180 280 L1145 280"/>
+  </g>
+
+  <!-- neural network: 4 -> 5 -> 3 nodes, right side -->
+  <g id="net" transform="translate(760,40)">
+    <g id="synapses" stroke="#00F0FF" stroke-width="1" opacity="0.35">
+      <!-- layer1(4) to layer2(5) -->
+      <line x1="0" y1="20" x2="140" y2="10"/><line x1="0" y1="20" x2="140" y2="55"/><line x1="0" y1="20" x2="140" y2="100"/>
+      <line x1="0" y1="70" x2="140" y2="10"/><line x1="0" y1="70" x2="140" y2="55"/><line x1="0" y1="70" x2="140" y2="145"/>
+      <line x1="0" y1="120" x2="140" y2="55"/><line x1="0" y1="120" x2="140" y2="100"/><line x1="0" y1="120" x2="140" y2="190"/>
+      <line x1="0" y1="170" x2="140" y2="100"/><line x1="0" y1="170" x2="140" y2="145"/><line x1="0" y1="170" x2="140" y2="190"/>
+      <!-- layer2(5) to layer3(3) -->
+      <line x1="140" y1="10" x2="280" y2="45"/><line x1="140" y1="55" x2="280" y2="45"/>
+      <line x1="140" y1="100" x2="280" y2="100"/><line x1="140" y1="55" x2="280" y2="100"/>
+      <line x1="140" y1="145" x2="280" y2="100"/><line x1="140" y1="145" x2="280" y2="155"/>
+      <line x1="140" y1="190" x2="280" y2="155"/><line x1="140" y1="100" x2="280" y2="155"/>
+    </g>
+
+    <!-- traveling signal pulses -->
+    <circle r="3" fill="#00F0FF" filter="url(#softGlow)">
+      <animateMotion dur="2.6s" repeatCount="indefinite" path="M0,20 L140,10 L280,45"/>
+    </circle>
+    <circle r="3" fill="#B39DFF" filter="url(#softGlow)">
+      <animateMotion dur="3.1s" repeatCount="indefinite" begin="0.6s" path="M0,120 L140,100 L280,100"/>
+    </circle>
+    <circle r="3" fill="#00F0FF" filter="url(#softGlow)">
+      <animateMotion dur="2.8s" repeatCount="indefinite" begin="1.2s" path="M0,170 L140,190 L280,155"/>
+    </circle>
+
+    <g id="nodes" fill="#0f0c29" stroke="#00F0FF" stroke-width="1.5">
+      <circle cx="0" cy="20" r="6"><animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/></circle>
+      <circle cx="0" cy="70" r="6"><animate attributeName="opacity" values="1;0.5;1" dur="2.3s" repeatCount="indefinite"/></circle>
+      <circle cx="0" cy="120" r="6"><animate attributeName="opacity" values="0.5;1;0.5" dur="1.8s" repeatCount="indefinite"/></circle>
+      <circle cx="0" cy="170" r="6"><animate attributeName="opacity" values="1;0.6;1" dur="2.6s" repeatCount="indefinite"/></circle>
+
+      <circle cx="140" cy="10" r="5" stroke="#B39DFF"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" repeatCount="indefinite"/></circle>
+      <circle cx="140" cy="55" r="5" stroke="#B39DFF"><animate attributeName="opacity" values="1;0.4;1" dur="1.9s" repeatCount="indefinite"/></circle>
+      <circle cx="140" cy="100" r="5" stroke="#B39DFF"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.4s" repeatCount="indefinite"/></circle>
+      <circle cx="140" cy="145" r="5" stroke="#B39DFF"><animate attributeName="opacity" values="1;0.5;1" dur="2.2s" repeatCount="indefinite"/></circle>
+      <circle cx="140" cy="190" r="5" stroke="#B39DFF"><animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/></circle>
+
+      <circle cx="280" cy="45" r="7" stroke="#00F0FF"><animate attributeName="opacity" values="0.6;1;0.6" dur="1.7s" repeatCount="indefinite"/></circle>
+      <circle cx="280" cy="100" r="7" stroke="#00F0FF"><animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite"/></circle>
+      <circle cx="280" cy="155" r="7" stroke="#00F0FF"><animate attributeName="opacity" values="0.6;1;0.6" dur="2.3s" repeatCount="indefinite"/></circle>
+    </g>
+  </g>
+
+  <!-- title block -->
+  <g font-family="Consolas, 'Fira Code', monospace">
+    <text x="60" y="120" font-size="15" fill="#B39DFF" letter-spacing="6" opacity="0.85">SYSTEM // NIRVANA_DUBEY.INIT</text>
+    <text x="60" y="175" font-size="52" font-weight="700" fill="url(#titleGrad)" filter="url(#glow)">NIRVANA DUBEY</text>
+    <text x="60" y="210" font-size="19" fill="#c9d1d9" letter-spacing="1">AI &amp; Machine Learning Engineer — In Training</text>
+    <text x="60" y="238" font-size="13" fill="#00F0FF" opacity="0.7" letter-spacing="2">[ MODEL_STATUS: LEARNING ]  [ FOCUS: DEEP_LEARNING · CV · NLP · GENAI ]</text>
+  </g>
+
+  <rect x="40" y="255" width="1120" height="1" fill="#00F0FF" opacity="0.25"/>
+</svg>

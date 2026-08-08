@@ -1,0 +1,33 @@
+<svg width="1200" height="34" viewBox="0 0 1200 34" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lineFade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f0c29" stop-opacity="0"/>
+      <stop offset="12%" stop-color="#00F0FF" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#B39DFF" stop-opacity="0.85"/>
+      <stop offset="88%" stop-color="#00F0FF" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0f0c29" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="pulseGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <line x1="0" y1="17" x2="1200" y2="17" stroke="url(#lineFade)" stroke-width="1.4"/>
+
+  <g fill="#0d1117" stroke="#00F0FF" stroke-width="1.2">
+    <circle cx="150" cy="17" r="3.5"/>
+    <circle cx="400" cy="17" r="3.5"/>
+    <circle cx="600" cy="17" r="3.5"/>
+    <circle cx="800" cy="17" r="3.5"/>
+    <circle cx="1050" cy="17" r="3.5"/>
+  </g>
+
+  <circle r="4" fill="#00F0FF" filter="url(#pulseGlow)">
+    <animateMotion dur="5s" repeatCount="indefinite" path="M0,17 L1200,17"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.9;1" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="3" fill="#B39DFF" filter="url(#pulseGlow)">
+    <animateMotion dur="5s" begin="2.5s" repeatCount="indefinite" path="M0,17 L1200,17"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.9;1" dur="5s" begin="2.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>
